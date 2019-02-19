@@ -9,3 +9,10 @@
 /fresco-quiz/.factorypath
 /fresco-quiz/.classpath
 /fresco-quiz/.project
+/fresco-quiz/target/
+/.project
+/fresco-web/.factorypath
+/fresco-web/.settings/
+/fresco-web/.project
+/fresco-web/.classpath
+/fresco-web/target/
