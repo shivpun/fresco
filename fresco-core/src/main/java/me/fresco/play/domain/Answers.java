@@ -8,19 +8,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties
 public class Answers implements Serializable {
-	
+
+	private static final long serialVersionUID = -2569972984949207163L;
+
 	@JsonProperty(value = "id")
 	private Integer id;
-	
+
 	@JsonProperty(value = "answer_no")
 	private Integer answerNo;
-	
+
 	@JsonProperty(value = "answer")
 	private String answer;
-	
+
 	@JsonIgnore
 	private String type;
-	
+
 	@JsonIgnore
 	private String is_true;
 
@@ -31,7 +33,7 @@ public class Answers implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	public Integer getAnswerNo() {
 		return answerNo;
 	}
@@ -47,7 +49,7 @@ public class Answers implements Serializable {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-	
+
 	public String getType() {
 		return type;
 	}
