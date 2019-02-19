@@ -36,7 +36,7 @@ public class FrescoQuery {
 	
 	public static final String DELETE_QW = "DELETE from QW WHERE fq_id=?";
 	
-	public static final String INSERT_AT = "INSERT INTO AT (fq_id, fa_id, score, total, minq, n_id, s_id, g_id, c_id, create_date) VALUES (?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
+	public static final String INSERT_AT = "INSERT INTO AT (fq_id, fa_id, nos_qa, score, total, minq, n_id, s_id, g_id, c_id, create_date) VALUES (?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
 	
 	public static final String SEQ_AT = "SELECT nextval('FRESCO_AT_SEQ')";
 }
