@@ -13,6 +13,8 @@ import me.fresco.play.constant.FrescoConstant;
 @JsonIgnoreProperties
 public class Question implements Serializable {
 
+	private static final long serialVersionUID = 6316894169919798037L;
+
 	@JsonProperty(value = "id")
 	private Integer id;
 

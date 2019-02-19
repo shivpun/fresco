@@ -24,19 +24,19 @@ public class FrescoQuery {
 	
 	public static final String SELECT_FINAL_ANS_QW = "select fq_id,fa_id from qw where fq_id in (select fq_id from qa where s_id=?)";
 	
-	public static final String INSERT_Q = "INSERT INTO Q (f_id, Q) VALUES (?,?)";
+	public static final String INSERT_Q = "INSERT INTO Q (f_id, Q, create_date) VALUES (?,?, CURRENT_TIMESTAMP)";
 	
-	public static final String INSERT_A = "INSERT INTO A (f_id, A) VALUES (?,?)";
+	public static final String INSERT_A = "INSERT INTO A (f_id, A, create_date) VALUES (?,?, CURRENT_TIMESTAMP)";
 	
-	public static final String INSERT_QA = "INSERT INTO QA (fq_id, fa_id, s_id, g_id, score, total, minq) VALUES (?,?, ? ,?,?,?,?)";
+	public static final String INSERT_QA = "INSERT INTO QA (fq_id, fa_id, n_id, s_id, g_id, c_id, score, total, minq, create_date) VALUES (?,?, ?,?, ?,?,?,?,?, CURRENT_TIMESTAMP)";
 	
-	public static final String INSERT_QC = "INSERT INTO QC (fq_id, fa_id) VALUES (?,?)";
+	public static final String INSERT_QC = "INSERT INTO QC (fq_id, fa_id, create_date) VALUES (?,?, CURRENT_TIMESTAMP)";
 	
-	public static final String INSERT_QW = "INSERT INTO QW (fq_id, fa_id) VALUES (?,?)";
+	public static final String INSERT_QW = "INSERT INTO QW (fq_id, fa_id, create_date) VALUES (?,?, CURRENT_TIMESTAMP)";
 	
 	public static final String DELETE_QW = "DELETE from QW WHERE fq_id=?";
 	
-	public static final String INSERT_AT = "INSERT INTO AT (fq_id, fa_id, score, total, minq, seq) VALUES (?,?,?,?,?,?)";
+	public static final String INSERT_AT = "INSERT INTO AT (fq_id, fa_id, score, total, minq, n_id, s_id, g_id, c_id, create_date) VALUES (?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
 	
 	public static final String SEQ_AT = "SELECT nextval('FRESCO_AT_SEQ')";
 }
